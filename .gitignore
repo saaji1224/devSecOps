@@ -1,0 +1,19 @@
+# Terraform downloaded providers and working files
+**/.terraform/
+
+# Terraform state files
+*.tfstate
+*.tfstate.*
+
+# Terraform variable files (may contain secrets)
+*.tfvars
+*.tfvars.json
+!*.tfvars.example
+
+# Crash logs
+crash.log
+crash.*.log
+
+# Local Terraform CLI configuration
+.terraformrc
+terraform.rc
