@@ -65,6 +65,6 @@ module "eks" {
 
   cluster_name = "ecommerce-eks"
 
-  private_subnet_ids = module.vpc.private_app_subnet_ids
+  private_subnet_ids = module.vpc.public_subnet_ids
 
 }
