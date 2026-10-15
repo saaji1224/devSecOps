@@ -69,5 +69,14 @@ resource "aws_flow_log" "vpc_flow_log" {
 
 
 }
-
-
+# # error and trouble shoot command
+# module.eks.aws_eks_node_group.main: Creation complete after 1m17s [id=ecommerce-eks:ecommerce-eks-ng]
+# ╷
+# │ Error: creating CloudWatch Logs Log Group (/aws/vpc/flowlogs): operation error CloudWatch Logs: CreateLogGroup, https response error StatusCode: 400, RequestID: f6949267-645e-4df9-a7dd-2fe5d6f05098, ResourceAlreadyExistsException: The specified log group already exists
+# │
+# │   with module.flowlogs.aws_cloudwatch_log_group.vpc_flow_logs,
+# │   on ..\..\modules\flowlogs\main.tf line 1, in resource "aws_cloudwatch_log_group" "vpc_flow_logs":
+# │    1: resource "aws_cloudwatch_log_group" "vpc_flow_logs" {
+# │
+# ╵
+#  terraform import module.flowlogs.aws_cloudwatch_log_group.vpc_flow_logs "/aws/vpc/flowlogs"
